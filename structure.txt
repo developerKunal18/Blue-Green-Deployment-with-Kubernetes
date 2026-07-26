@@ -1,0 +1,60 @@
+🧠 Why This Is Important
+
+Traditional deployment:
+Old Version
+     │
+Update
+     ▼
+❌ Downtime
+
+Blue-Green deployment:
+           Users
+             │
+             ▼
+        Kubernetes Service
+             │
+     ┌───────┴────────┐
+     ▼                ▼
+Blue (v1)       Green (v2)
+Current         New Version
+
+After testing Green:
+Users
+  │
+  ▼
+Service
+  │
+  ▼
+Green (v2)
+
+Blue removed later
+
+Benefits:
+✅ Zero downtime
+✅ Easy rollback
+✅ Safer deployments
+✅ Production testing
+✅ Reduced deployment risk
+
+Used By :
+Netflix
+Amazon
+Google
+Microsoft Azure
+Red Hat OpenShift
+
+🛠 Tech Stack
+Python
+Flask
+Docker
+Kubernetes
+
+📂 Project Structure
+blue-green-deployment/
+│
+├── app.py
+├── Dockerfile
+├── deployment-blue.yaml
+├── deployment-green.yaml
+├── service.yaml
+└── README.md
